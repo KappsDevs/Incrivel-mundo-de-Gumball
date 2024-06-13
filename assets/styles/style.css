@@ -1,0 +1,119 @@
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 500vh;
+}
+                /* NavBar */
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+                /* Header */
+header{
+    width: 100%;
+    padding: 60px 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+header.rolagem{
+    background-color: #fff;
+    padding: 20px 4%;
+}
+
+header.rolagem a{
+    color: #63AEF3;
+}
+
+header ul{
+    list-style-type: none;
+}
+
+header ul li{
+    display: inline-block;
+    margin: 0 40px;
+}
+
+header ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.banner{
+    background-image: url(wallpaper.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh; 
+    
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.banner h2{
+    color: #fff;
+    font-size: 2rem;
+    margin-left: 7vw;
+    margin-bottom: 1rem;
+}
+
+.banner h3{
+    font-size: 1.5rem;
+    color: #fff;
+    margin-left: 9vw;
+    margin-top: 0;
+   
+}
+
+.banner .btn{
+    font-size: 1rem;
+    margin-left: 20vw;
+    margin-bottom: 0vh;
+    padding: 5px 10px;
+    background-color: #63AEF3;
+    color: #EEEEEE;
+}
+
+
+.Navbar__Link-toggle {
+    display: none;
+  }
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    nav, .nav-item {
+      flex-direction: column;
+      gap:10px;
+    }
+    .nav-item{
+        display: none;
+    }
+    .Navbar__ToggleShow {
+        display: flex;
+      }
+    .Navbar__Link-toggle{
+        align-self: flex-end;
+        display: initial;
+        position: absolute;
+        cursor: pointer;
+    }
+    
+  }

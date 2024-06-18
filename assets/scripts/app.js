@@ -16,3 +16,43 @@ function classHeader(){
 
 
 window.addEventListener("scroll", classHeader)
+
+
+
+
+// Fade in Effect
+
+function fadeInSecondTitle() {
+  const subtitle = document.getElementById('second-title');
+  subtitle.style.opacity = 1; 
+}
+
+// Type Writter Effect
+
+
+const FIRST_TITLE = document.getElementById("first-title");
+const TEXT = document.getElementById("first-title").textContent;
+
+
+function typeWritterEffect(element,text, i = 0){
+  
+  if( i === 0){
+    element.textContent = "";
+  }
+
+  
+  element.textContent += text[i];
+
+  if(i === text.length - 1){
+    fadeInSecondTitle()
+    return;
+  }
+
+
+  setTimeout(() => typeWritterEffect(element, text, i + 1), 50)
+}
+
+typeWritterEffect(FIRST_TITLE, TEXT);
+
+
+

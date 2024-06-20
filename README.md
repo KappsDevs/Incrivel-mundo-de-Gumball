@@ -1,6 +1,6 @@
 # Incrível Mundo de Gumball
 
-![Veja aqui!](https://kappsdevs.github.io/Incrivel-mundo-de-Gumball/img/gumball.png)
+![Veja aqui!](https://kappsdevs.github.io/Incrivel-mundo-de-Gumball/)
 
 ## Descrição
 

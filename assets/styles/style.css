@@ -3,9 +3,13 @@ body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    height: 500vh;
     background-color: #CAF4FF;
+    font-family: 'Roboto Slab', serif;}
+
+html{
+    scroll-behavior: smooth;
 }
+
                 /* NavBar */
 .container{
     max-width: 1200px;
@@ -77,17 +81,11 @@ header ul li a{
     color: #fff;
     margin-left: 9vw;
     margin-top: 0;
+    opacity: 0; /* Começa completamente transparente */
+    transition: opacity 1s ease-in-out; /* Transição suave */
    
 }
 
-.banner .btn{
-    font-size: 1rem;
-    margin-left: 20vw;
-    margin-bottom: 0vh;
-    padding: 5px 10px;
-    background-color: #63AEF3;
-    color: #EEEEEE;
-}
 
 
 .Navbar__Link-toggle {
@@ -103,6 +101,10 @@ header ul li a{
     margin: auto;
     padding: 5vh;
     gap: 2%;
+}
+
+.image-cena{
+    border-radius: 5px;
 }
                 /* Assista em */
 
@@ -167,6 +169,41 @@ header ul li a{
     grid-area: 1 / 1 / 2 / 7;
 }
 
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: .5s ease;
+    opacity: 0;
+}
+
+  .personagem {
+    position: relative;
+    width: 180px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+  .image {
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    border-radius:5px;
+  }
+  
+  .personagem:hover .image {
+    opacity: 0.3;
+  }
+  
+  .personagem:hover .middle {
+    opacity: 1;
+  }
+            /* Personagens */
+
+
 #temporadas{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -176,7 +213,9 @@ header ul li a{
     max-width: 1200px;
     margin: auto;
     align-items: center;
-    
+
+
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 #temporadas h3{
@@ -223,22 +262,40 @@ header ul li a{
 }
 
 
-@media only screen and (max-width: 768px) {
-    nav, .nav-item {
-      flex-direction: column;
-      gap:10px;
-    }
-    .nav-item{
-        display: none;
-    }
-    .Navbar__ToggleShow {
-        display: flex;
-      }
-    .Navbar__Link-toggle{
-        align-self: flex-end;
-        display: initial;
-        position: absolute;
-        cursor: pointer;
-    }
-    
+
+#temporadas div:after{
+    content:"";
+    position:absolute;
+    width:10%;
+    height:10%;
+    opacity:0;
+    border-radius:5px;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index -1;
   }
+  
+  #temporadas .image1:hover{
+    transform:scale(1.0,1.25);
+  }
+  
+
+
+            /* Footer */
+
+
+footer{
+    padding: 30px;
+    text-align: center;
+    margin-top: 200px;
+    background-color: #63AEF3;
+}
+
+
+
+
+
+
+
+
+
+
